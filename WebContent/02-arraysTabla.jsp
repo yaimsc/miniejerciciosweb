@@ -4,25 +4,40 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>01-For</title>
+<title>02-arraysTabla</title>
+<style type = text/css>
+.suspenso{
+color  : red; 
+}
+
+.aprobado{
+color : green;
+}
+</style>
 </head>
+
 <body>
 <%
 String[] nombres = {"Jon", "Maria", "Eneko", "Miguel", "Josu"}; 
 
-int[] edades = {22, 23, 24, 19, 20}; 
+int[] notas = {10, 2, 7, 9, 0}; 
 %>
 
 <table border=1px>
 <tr>
 <th>Nombre</th>
-<th>Edad</th>
+<th>Notas</th>
 
 
 <% 
 //el for recorre los arrays creados por programacion
 for(int i = 0; i < nombres.length; i++){
-	out.print("<tr><td>" + nombres[i] + "</td>" + "<td>" + edades[i] + "</td></tr>"); 
+	out.print("<tr><td>" + nombres[i] + "</td>"); 
+	if(notas[i] < 5){
+		out.print("<td class= suspenso>" + notas[i]); 
+	}else{
+		out.print("<td class = aprobado>" + notas[i]); 
+	}
 }
 %>
 </tr>

@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>02-Arrays</title>
+<title>01-for</title>
 </head>
 <body>
 <%
+for(int i = 0; i < 5; i ++){
+	out.println("Hola Mundo!<br>"); 
+}
 %>
 </body>
 </html>
