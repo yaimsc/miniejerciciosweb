@@ -11,11 +11,21 @@
 String[] nombres = {"Jon", "Maria", "Eneko", "Miguel", "Josu"}; 
 
 int[] edades = {22, 23, 24, 19, 20}; 
+%>
 
+<table border=1px>
+<tr>
+<th>Nombre</th>
+<th>Edad</th>
+
+
+<% 
 //el for recorre los arrays creados por programacion
 for(int i = 0; i < nombres.length; i++){
-	out.print(nombres[i] + " " + edades[i] + "<br>"); 
+	out.print("<tr><td>" + nombres[i] + "</td>" + "<td>" + edades[i] + "</td></tr>"); 
 }
 %>
+</tr>
+</table>
 </body>
 </html>
